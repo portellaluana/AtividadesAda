@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div>
+      <form action="" method="post">
+        <ul>
+          <li class="form-control">
+            <h5>cadastro</h5>
+            <label for="nome">nome</label>
+            <input class="input input-alt" id="nome" required type="text" />
+            <span class="input-border input-border-alt"></span>
+          </li>
+
+          <li class="form-control">
+            <label for="email">email</label>
+            <input
+              class="input input-alt"
+              id="email"
+              required
+              type="email"
+            />
+            <span class="input-border input-border-alt"></span>
+          </li>
+
+          <li class="form-control">
+            <label for="senha">senha</label>
+            <input
+              class="input-alt"
+              id="senha"
+              required
+              type="password"
+            />
+            <span class="input-border input-border-alt"></span>
+          </li>
+
+          <li class="li-checkbox">
+            <input class="checkbox" type="checkbox" id="switch" checked/>
+            <label class="label-checkbox" for="switch"></label>
+            <p>quero receber novidades</p>
+          </li>
+
+          <li class="container-radio-button">
+            <h5>doação</h5>
+            <div class="radio-button">
+              <input
+                type="radio"
+                name="s1"
+                id="o1"
+                value="0"
+                id="seg1"
+                disabled
+              />
+              <label for="o1" class="disabled">R$ 0</label>
+
+              <input
+                type="radio"
+                name="s1"
+                id="o2"
+                value="50"
+                id="seg2"
+                checked
+              /><label for="o2">R$50</label>
+
+              <input
+                type="radio"
+                name="s1"
+                id="o3"
+                value="100"
+                id="seg3"
+              /><label for="o3">R$ 100</label>
+             
+              <input
+                type="radio"
+                name="s1"
+                id="o4"
+                value="500"
+                id="seg4"
+              /><label for="o4">R$ 500</label>
+            </div>
+          </li>
+        </ul>
+        <button type="submit" onclick="onClick()">enviar</button>
+      </form>
+    </div>
+<script src="script.js"></script>
+  </body>
+</html>
