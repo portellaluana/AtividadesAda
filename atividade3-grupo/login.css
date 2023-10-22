@@ -129,6 +129,7 @@ textarea:focus {
     }
     .container{
         width: 90%;
+        height: 70%;
         border-radius: 10px;
     }
     form{
