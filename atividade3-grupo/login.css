@@ -39,6 +39,15 @@ body{
     
 }
 
+.input-group input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  border: solid 1px var(--brand-light);
+}
+
 .img-login img{
     
     height: 100%;
