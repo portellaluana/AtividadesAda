@@ -245,6 +245,11 @@ section #produtos {
   height: 80px;
 }
 
+.produtos-all li a {
+  text-decoration: none;
+}
+
+
 /* ________________________DUVIDAS________________________ */
 
 #duvida {
