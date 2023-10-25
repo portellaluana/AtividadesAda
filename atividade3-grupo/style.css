@@ -28,7 +28,7 @@ header {
   background-size: cover;
   background-position: top center;
   position: relative;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   justify-items: center;
 }
@@ -466,7 +466,11 @@ footer img {
     width: 80%;
     margin: 0 auto;
   }
+  .container-nav{
+    width: 100vw;
 
+
+  }
   .item-nav {
     display: none;
   }
@@ -612,6 +616,8 @@ footer img {
   .container-footer {
     display: block;
     text-align: center;
+    width: 90%;
+
   }
 
 }

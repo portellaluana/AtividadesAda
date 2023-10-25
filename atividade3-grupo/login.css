@@ -73,6 +73,7 @@ textarea:focus {
 
 .button-login{
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -92,6 +93,24 @@ textarea:focus {
     background-color: #403836;
 }
 
+#cta-secundario {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0.62rem;
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--brand-dark);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+font-size: .8rem; 
+margin-top: 6px;
+}
+
 .login-header h1::after{
     content: '';
     display: block;
@@ -108,7 +127,7 @@ textarea:focus {
     flex-direction: column;
     margin-bottom: 1.1rem;
 }
-
+  
 .input-box input{
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
