@@ -10,27 +10,32 @@
 body {
   color: white;
   font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-header {
-  display: flex;
-  height: 100vh;
+
+.destaque-header {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
-.container-header {
-  display: block;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1080px;
+  margin: 16px auto;
+}
+
+.destaque-container{
+  display: flex;
   background-image: url(./assets/background-financial.png);
   background-size: cover;
   background-position: top center;
-  position: relative;
-  width: 100%;
-  justify-content: center;
-  justify-items: center;
+  height: 600px;
+  align-items:center
 }
 
 .container-nav {
@@ -42,18 +47,6 @@ header {
   background-color: white;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  top: 0;
-  left: 0;
-  height: 6rem;
-  align-items: center;
-  z-index: 1;
-  width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .mobile-menu-icon {
   display: none;
@@ -86,15 +79,19 @@ nav li a:hover {
   font-weight: bold;
 }
 
+.link-nav {
+  border-bottom: 3px solid white;
+}
+
+.link-nav:hover {
+  border-bottom: 3px solid var(--brand-light);
+}
+
 nav img {
   width: 184px;
   cursor: pointer;
 }
 
-header .destaque-header {
-  max-width: 1080px;
-  margin: 12rem auto 0 auto;
-}
 
 .paragrafo-destaque {
   margin-bottom: 2rem;
@@ -124,6 +121,10 @@ h3 {
   margin-top: 5rem;
 }
 
+.h3-destaque{
+  margin: 0;
+}
+
 h4 {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
@@ -141,6 +142,20 @@ h4 {
   border: solid 1px #ea8245;
   border-radius: 100px;
   padding: 0.8rem 2rem;
+  cursor: pointer;
+}
+.cta-nav{
+  margin: 0 12px;
+}
+.cta-secundario {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brand-light);
+  background-color: transparent;
+  border-radius: 100px;
+  padding: 0.8rem 1rem;
   cursor: pointer;
 }
 
@@ -226,6 +241,11 @@ section #produtos {
   height: 80px;
 }
 
+.produtos-all li a {
+  text-decoration: none;
+}
+
+
 /* ________________________DUVIDAS________________________ */
 
 #duvida {
@@ -251,6 +271,7 @@ section #produtos {
 /* ________________________CONTATO________________________ */
 
 #contato {
+  display: block;
   min-height: 100vh;
   justify-content: center;
   padding-bottom: 8rem;
@@ -279,9 +300,8 @@ section #produtos {
 .container-form {
   display: block;
   width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
+  margin: 1rem auto;
+
 }
 
 .container-form input,
@@ -327,7 +347,6 @@ select {
 .container-checkbox {
   display: flex;
   width: 400px;
-
   align-items: center;
 }
 
@@ -387,13 +406,19 @@ footer ul {
 footer ul li a {
   list-style: none;
   font-family: "Poppins", sans-serif;
-
   font-size: 1rem;
   padding: 12px 12px;
   margin: 0 4px;
   cursor: pointer;
   text-decoration: none;
   color: white;
+  border-bottom: 3px solid var(--brand-dark);
+}
+.link-footer{
+  border-bottom: 3px solid var(--brand-dark);
+}
+.link-footer:hover {
+  border-bottom: 3px solid var(--brand-light);
 }
 
 footer li a:hover {
@@ -435,9 +460,14 @@ footer img {
   .destaque-header {
     text-align: center;
     width: 80%;
-    margin: 0 auto;
   }
+  .container-nav{
+    width: 100vw;
 
+  }
+  .h3-destaque{
+    margin: auto;
+  }
   .item-nav {
     display: none;
   }
@@ -484,11 +514,7 @@ footer img {
   }
 
   nav {
-    display: flex;
     width: 80%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    height: auto;
   }
 
   nav button {
@@ -583,6 +609,8 @@ footer img {
   .container-footer {
     display: block;
     text-align: center;
+    width: 90%;
+
   }
 
 }

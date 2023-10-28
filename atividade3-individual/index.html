@@ -12,41 +12,35 @@
 
   <body>
     <header>
-      <div class="container-header">
-        <div class="container-nav">
-          <nav>
-            <div>
-              <a href="">
-                <img src="./assets/logo.png" alt="logo smart financial" />
-              </a>
-            </div>
-
-            <ul>
-              <li class="item-nav"><a href="#sobre">Sobre</a></li>
-              <li class="item-nav"><a href="#produtos">Produtos</a></li>
-              <li class="item-nav"><a href="#contato">Contato</a></li>
-              <li class="login-btn">
-                <a href="#contato" class="cta">Conversar com especialista</a>
-              </li>
-            </ul>
-
-            <div class="mobile-menu-icon">
-              <button>
-                <img class="icon-menu" src="./assets/menu.png" alt="" />
-              </button>
-            </div>
-          </nav>
-          <div class="mobile-menu">
-            <li class="item-nav"><a href="#sobre">Sobre</a></li>
-            <li class="item-nav"><a href="#produtos">Produtos</a></li>
-            <li class="item-nav"><a href="#contato">Contato</a></li>
-            <div class="login-btn">
-              <a href="#contato" class="cta">Conversar com especialista</a>
-            </div>
-          </div>
+      <nav>
+        <div>
+          <a href="#">
+            <img src="./assets/logo.png" alt="logo smart financial" />
+          </a>
         </div>
+
+        <ul>
+          <li class="item-nav link-nav"><a href="#sobre">Sobre</a></li>
+          <li class="item-nav link-nav"><a href="product.html">Produtos</a></li>
+          <li class="item-nav link-nav"><a href="cadastro.html">Contato</a></li>
+          <li class="login-btn">
+            <a href="#contato" class="cta cta-nav">Conversar com especialista</a>
+          </li>
+          <li class="btn-login item-nav">
+            <a href="login.html" class="cta-secundario">Login</a>
+          </li>
+        </ul>
+
+        <div class="mobile-menu-icon">
+          <button>
+            <img class="icon-menu" src="./assets/menu.png" alt="" />
+          </button>
+        </div>
+      </nav>
+
+      <div class="destaque-container">
         <div class="destaque-header">
-          <h3>Aprenda com seu dinheiro</h3>
+          <h3 class="h3-destaque">Aprenda com seu dinheiro</h3>
           <h1>Investimentos</h1>
           <p class="paragrafo-destaque">
             Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore
@@ -88,12 +82,14 @@
             </p>
           </li>
           <li>
-            <img src="./assets/wallet.png" alt="ícone investimento" />
-            <h4>Investimento</h4>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
-            </p>
+            <a href="product.html">
+              <img src="./assets/wallet.png" alt="ícone investimento" />
+              <h4>Investimento</h4>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam.
+              </p>
+            </a>
           </li>
           <li>
             <img src="./assets/solution.png" alt="ícone seducação financeira" />
@@ -408,9 +404,16 @@
           </a>
         </div>
         <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li class="li-footer link-footer"><a href="#sobre">Sobre</a></li>
+          <li class="li-footer link-footer">
+            <a href="product.html">Produtos</a>
+          </li>
+          <li class="li-footer link-footer">
+            <a href="cadastro.html">Contato</a>
+          </li>
+          <li class="li-footer">
+            <a href="login.html" class="cta-secundario">Login</a>
+          </li>
         </ul>
       </div>
     </footer>
