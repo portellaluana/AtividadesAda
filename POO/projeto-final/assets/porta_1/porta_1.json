@@ -1,0 +1,183 @@
+{
+  "frames": {
+    "idle_1_2.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 189,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 45,
+        "w": 189,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "reveal_1_4.png": {
+      "frame": {
+        "x": 0,
+        "y": 202,
+        "w": 189,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 45,
+        "w": 189,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "reveal_1_5.png": {
+      "frame": {
+        "x": 0,
+        "y": 404,
+        "w": 189,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 45,
+        "w": 189,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "reveal_1_3.png": {
+      "frame": {
+        "x": 0,
+        "y": 606,
+        "w": 167,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 45,
+        "w": 167,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "idle_1_1.png": {
+      "frame": {
+        "x": 0,
+        "y": 808,
+        "w": 165,
+        "h": 200
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 47,
+        "w": 165,
+        "h": 200
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "reveal_1_1.png": {
+      "frame": {
+        "x": 0,
+        "y": 808,
+        "w": 165,
+        "h": 200
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 47,
+        "w": 165,
+        "h": 200
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "reveal_1_2.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 189,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 45,
+        "w": 189,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 189,
+        "h": 247
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "porta_1.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 189,
+      "h": 1008
+    },
+    "scale": 1
+  }
+}

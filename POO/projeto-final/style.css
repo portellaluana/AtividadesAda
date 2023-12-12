@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  display: block;
+}
+h1,
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itensContainer {
+  display: flex;
+}
+#resultado {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  align-items: center;
+}
+.item:hover {
+  cursor: pointer;
+  background-image: url(./assets/porta_1/idle/idle_1_2.png);
+}
