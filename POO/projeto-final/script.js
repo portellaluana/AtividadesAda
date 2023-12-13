@@ -1,30 +1,22 @@
 class Jogo {
   constructor() {
-    this.itens = [
-      { nome: "perdeTudo", chance: 0.2, valor: 0 },
-      { nome: "ganhaTudo", chance: 0.2, valor: 30 },
-      { nome: "ganhaPouquinho", chance: 0.2, valor: 10 },
-      { nome: "ganhaPouquinho", chance: 0.2, valor: 10 },
-      { nome: "ganhaPouquinho", chance: 0.2, valor: 10 },
-    ];
     this.pontuacaoTotal = 0;
     this.chancesRestantes = 5;
   }
 
-  escolheItem(nomeItem) {
+  escolheItem() {
     if (this.chancesRestantes > 0) {
       let mensagem = "";
       let pontosGanhos = 0;
 
-      const itemSelecionado = this.itens.find(item => item.nome === nomeItem);
       const random = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-
-      if (random < 3 && itemSelecionado.nome === "ganhaTudo") {
+console.log('random', random)
+      if (random < 3 ) {
         mensagem = `GANHA 30`;
         pontosGanhos = +30;
-      } else if (random > 2 && random < 5 && itemSelecionado.nome === "perdeTudo") {
+      } else if (random > 2 && random < 5) {
         mensagem = `PERDEU TUDO`;
-        pontosGanhos = 0;
+        pontosGanhos = this.pontuacaoTotal*0;
         this.chancesRestantes = 0;
       } else {
         pontosGanhos = +10;
@@ -38,12 +30,12 @@ class Jogo {
       const pontuacaoAtual = document.getElementById('pontuacaoAtual');
 
       if (this.chancesRestantes === 0) {
-        resultado.innerHTML = `Suas chances acabaram. Sua pontuação total é: ${this.pontuacaoTotal}. Recarregue a página para jogar novamente!`;
+        resultado.innerHTML = `Recarregue a página para jogar novamente!`;
       } else {
-        resultado.innerHTML = `Chances restantes: ${this.chancesRestantes}. ${mensagem}`;
+        resultado.innerHTML = `${mensagem}`;
       }
 
-      // pontuacaoAtual.textContent = `Pontuação atual: ${this.pontuacaoTotal}`;
+      pontuacaoAtual.textContent = `Total a ganhar: ${this.pontuacaoTotal}`;
     }
   }
 
@@ -52,10 +44,8 @@ class Jogo {
     const jogo = this;
 
     itens.forEach(item => {
-      item.addEventListener('click', function(event) {
-        console.log('id', event.currentTarget.id)
-        const nomeItem = event.currentTarget.id;
-        jogo.escolheItem(nomeItem);
+      item.addEventListener('click', function() {
+        jogo.escolheItem();
       });
     });
   }

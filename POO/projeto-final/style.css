@@ -22,13 +22,27 @@ p {
 .itensContainer {
   display: flex;
 }
-#resultado {
+#resultado,#pontuacaoAtual {
   display: flex;
   justify-content: center;
   height: 30px;
   align-items: center;
 }
-.item:hover {
+.item {
   cursor: pointer;
-  background-image: url(./assets/porta_1/idle/idle_1_2.png);
+}
+.btn-refresh{
+  background-color: transparent;
+  border: none;
+}
+.container-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-refresh img{
+  width: 80px;
+  height: 80px;
 }
