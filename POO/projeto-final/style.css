@@ -19,7 +19,7 @@ p {
   align-items: center;
   justify-content: center;
 }
-.itensContainer {
+.itensContainer, .porta1, .porta2 {
   display: flex;
 }
 #resultado,#pontuacaoAtual {
@@ -29,7 +29,36 @@ p {
   align-items: center;
 }
 .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+}
+.acabou{
+  height: 30px;
+}
+.reveal{
+  background-image: url(./assets/porta_1/idle/reveal_1_5.png);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.value{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  font-size: 80px;
+  border-radius: 8px;
+}
+.others{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  font-size: 80px;
+  border-radius: 8px;
 }
 .btn-refresh{
   background-color: transparent;
@@ -43,6 +72,7 @@ p {
 }
 
 .btn-refresh img{
+  cursor: pointer;
   width: 80px;
   height: 80px;
 }

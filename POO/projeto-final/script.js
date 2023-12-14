@@ -1,55 +1,35 @@
-class Jogo {
-  constructor() {
-    this.pontuacaoTotal = 0;
-    this.chancesRestantes = 5;
-  }
-
-  escolheItem() {
-    if (this.chancesRestantes > 0) {
-      let mensagem = "";
-      let pontosGanhos = 0;
-
-      const random = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-console.log('random', random)
-      if (random < 3 ) {
-        mensagem = `GANHA 30`;
-        pontosGanhos = +30;
-      } else if (random > 2 && random < 5) {
-        mensagem = `PERDEU TUDO`;
-        pontosGanhos = this.pontuacaoTotal*0;
-        this.chancesRestantes = 0;
-      } else {
-        pontosGanhos = +10;
-        mensagem = `GANHA 10`;
-      }
-
-      this.pontuacaoTotal += pontosGanhos;
-      this.chancesRestantes--;
-
-      const resultado = document.getElementById('resultado');
-      const pontuacaoAtual = document.getElementById('pontuacaoAtual');
-
-      if (this.chancesRestantes === 0) {
-        resultado.innerHTML = `Recarregue a página para jogar novamente!`;
-      } else {
-        resultado.innerHTML = `${mensagem}`;
-      }
-
-      pontuacaoAtual.textContent = `Total a ganhar: ${this.pontuacaoTotal}`;
-    }
-  }
-
-  associarFormulario() {
-    const itens = document.querySelectorAll('.item');
-    const jogo = this;
-
-    itens.forEach(item => {
-      item.addEventListener('click', function() {
-        jogo.escolheItem();
-      });
-    });
+let currentLevel = 1;
+let value = document.querySelector('.value')
+let acabou = document.querySelector('.acabou')
+class levels {
+  constructor(nivel, itens) {
+    this.nivel = nivel;
+    this.itens = itens;
   }
 }
+const level1 = new levels(0, [10, 10, 10, 30, 30]);
+const level2 = new levels(1, [10, 10, 10, 30, 10]);
+const level3 = new levels(2, [10, 10, 10, 30, 0]);
+const level4 = new levels(3, [10, 10, 0, 30, 0]);
+const level5 = new levels(4, [10, 0, 0, 30, 0]);
 
-const jogo = new Jogo();
-jogo.associarFormulario();
+function sortearPorta() {
+  const itensDoNivelAtual = eval(`level${currentLevel}.itens`);
+  const indiceSorteado = Math.floor(Math.random() * itensDoNivelAtual.length);
+  const valorSorteado = itensDoNivelAtual[indiceSorteado];
+ 
+  console.log('itensDoNivelAtual', itensDoNivelAtual)
+
+  let arraySemSorteado = itensDoNivelAtual.indexOf(indiceSorteado)
+  itensDoNivelAtual.splice(arraySemSorteado, 1)
+
+  value.innerHTML = valorSorteado
+  console.log(' currentLevel',  currentLevel)
+  currentLevel++;
+  if(currentLevel === 6){
+    acabou.innerHTML = 'acabou tentativas'
+  }
+  if(valorSorteado === 0){
+    acabou.innerHTML = 'perdeu tudo'
+  }
+}
