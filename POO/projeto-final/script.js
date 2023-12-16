@@ -8,7 +8,6 @@ let porta2 = document.querySelector('.porta2')
 let porta3 = document.querySelector('.porta3')
 let porta4 = document.querySelector('.porta4')
 let porta5 = document.querySelector('.porta5')
-
 const btnAtualizar = document.querySelector(".btn-refresh");
 
 class levels {
@@ -41,12 +40,20 @@ function sortearPorta() {
   if (currentLevel === 6) {
     level.innerHTML = `Acabou`;
     btnAtualizar.style.display = "flex";
+
+    for (i = 0; i < item.length; i++) {
+      item[i].classList.add("gameover");
+    }
   }
   
   if (valorSorteado === 0) {
     level.innerHTML = `Perdeu tudo`;
     acabou.innerHTML = `Perdeu tudo`;
     btnAtualizar.style.display = "flex";
+
+    for (i = 0; i < item.length; i++) {
+      item[i].classList.add("gameover");
+    }
   } else acabou.innerHTML = `Total a ganhar R$ ${totalGanho}`;
 
   if(currentLevel === 2){
