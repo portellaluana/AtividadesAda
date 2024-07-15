@@ -54,8 +54,10 @@ function sortearPorta() {
     for (i = 0; i < item.length; i++) {
       item[i].classList.add("gameover");
     }
-  } else acabou.innerHTML = `Total a ganhar R$ ${totalGanho}`;
-
+  } else {
+acabou.innerHTML = `Total a ganhar R$ ${totalGanho}`;
+level.innerHTML = `Parabéns!`;  
+}
   if(currentLevel === 2){
     porta1.classList.add('hide')
     porta2.classList.remove('hide')
